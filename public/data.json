@@ -1,0 +1,177 @@
+[
+    {
+        "make": "Toyota",
+        "model": "Camry 2011",
+        "owner": "Bruce Carter",
+        "apptNotes": "Air conditioner not cooling",
+        "apptDate": "2020-01-12 10:20"
+    },
+    {
+        "make": "Honda",
+        "model": "Accord 2016",
+        "owner": "Steve Warner",
+        "apptNotes": "Oil change and general service",
+        "apptDate": "2020-01-18 11:45"
+    },
+    {
+        "make": "Honda",
+        "model": "Civic 2009",
+        "owner": "Luis Suarez",
+        "apptNotes": "Uneven tire tread wear and wobbly steering wheel",
+        "apptDate": "2020-01-20 15:05"
+    },
+    {
+        "make": "Hyundai",
+        "model": "Accent 2010",
+        "owner": "Audrey Brown",
+        "apptNotes": "Clogged filters and sensor issues",
+        "apptDate": "2020-01-21 12:00"
+    },
+    {
+        "make": "Jeep",
+        "model": "Cherokee 2013",
+        "owner": "Nathan Atkins",
+        "apptNotes": "Transmission fluid leaking",
+        "apptDate": "2020-01-22 9:10"
+    },
+    {
+        "make": "Dodge",
+        "model": "Challenger 2011",
+        "owner": "Patrick Swan",
+        "apptNotes": "Faulty water pump and engine overheating",
+        "apptDate": "2020-01-24 12:45"
+    },
+    {
+        "make": "Mercedes",
+        "model": "C-Class 2014",
+        "owner": "Jen Curriel",
+        "apptNotes": "Spark plug problems",
+        "apptDate": "2020-01-25 10:00"
+    },
+    {
+        "make": "Lincoln",
+        "model": "Continental 2011",
+        "owner": "Eddie Goodman",
+        "apptNotes": "Catalytic converter issues",
+        "apptDate": "2020-01-26 10:15"
+    },
+    {
+        "make": "Mazda",
+        "model": "CX-9 2007",
+        "owner": "Mike Truking",
+        "apptNotes": "Tire pressure irregularities",
+        "apptDate": "2020-01-28 13:35"
+    },
+    {
+        "make": "Ford",
+        "model": "Focus 2011",
+        "owner": "Jagdeep Singh",
+        "apptNotes": "Engine sputtering and brake pad change",
+        "apptDate": "2020-01-29 16:00"
+    },
+    {
+        "make": "Ford",
+        "model": "Edge 2016",
+        "owner": "Obi Okafor",
+        "apptNotes": "Oil change and general service",
+        "apptDate": "2020-01-30 9:55"
+    },
+    {
+        "make": "Hyundai",
+        "model": "Elantra 2010",
+        "owner": "Maggie Lane",
+        "apptNotes": "Thermostat failure and faulty ignition coil",
+        "apptDate": "2020-01-30 14:15"
+    },
+    {
+        "make": "Subaru",
+        "model": "Forrester 2009",
+        "owner": "Ahmed Chaudry",
+        "apptNotes": "Too much oil consumption and poor fuel economy",
+        "apptDate": "2020-01-31 11:30"
+    },
+    {
+        "make": "Honda",
+        "model": "Pilot 2013",
+        "owner": "Enrique Alba",
+        "apptNotes": "Transmission issues and jerking movement",
+        "apptDate": "2020-02-01 14:30"
+    },
+    {
+        "make": "Nissan",
+        "model": "Frontier 2010",
+        "owner": "Eduardo Salazer",
+        "apptNotes": "Power window issues",
+        "apptDate": "2020-02-01 16:45"
+    },
+    {
+        "make": "Volkswagen",
+        "model": "Golf 2011",
+        "owner": "William Kratzasky",
+        "apptNotes": "Burnt out headlamps and taillights",
+        "apptDate": "2020-02-03 9:15"
+    },
+    {
+        "make": "Toyota",
+        "model": "Highlander 2009",
+        "owner": "Ousmanne Camara",
+        "apptNotes": "Radiator leaks and purge control valve issues",
+        "apptDate": "2020-02-03 13:00"
+    },
+    {
+        "make": "Acura",
+        "model": "MDX 2012",
+        "owner": "Li Xhang",
+        "apptNotes": "Busted starter motor",
+        "apptDate": "2020-02-04 10:15"
+    },
+    {
+        "make": "Mazda",
+        "model": "CX-5 2018",
+        "owner": "Carol Sevental",
+        "apptNotes": "Streaky windshield + replace front and rear wipers",
+        "apptDate": "2020-02-05 11:50"
+    },
+    {
+        "make": "Kia",
+        "model": "Sorento 2006",
+        "owner": "Edgar Davies",
+        "apptNotes": "Cracked and loose fuel cap",
+        "apptDate": "2020-02-05 15:40"
+    },
+    {
+        "make": "Honda",
+        "model": "Odyssey 2007",
+        "owner": "Aisha Suleiman",
+        "apptNotes": "Body work and painting",
+        "apptDate": "2020-02-06 8:50"
+    },
+    {
+        "make": "Toyota",
+        "model": "Corolla 2017",
+        "owner": "Ola Adewale",
+        "apptNotes": "Swap out winter tires",
+        "apptDate": "2020-02-06 13:30"
+    },
+    {
+        "make": "Mercedes",
+        "model": "G-Wagon 2015",
+        "owner": "Brad Marlborough",
+        "apptNotes": "Replace battery and reset console radio code",
+        "apptDate": "2020-02-07 12:35"
+    },
+    {
+        "make": "Toyota",
+        "model": "Land Cruiser 2019",
+        "owner": "Ifeanyi Me",
+        "apptNotes": "Fix all season tires + wheel balancing + alignment",
+        "apptDate": "2020-02-08 14:00"
+    },
+    {
+        "make": "BMW",
+        "model": "X3 2005",
+        "owner": "Elijah Artwood",
+        "apptNotes": "Alternator failure and emission issues",
+        "apptDate": "2020-02-10 11:00"
+    }
+]
