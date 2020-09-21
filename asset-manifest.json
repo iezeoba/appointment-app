@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/appointment-app/static/css/main.354cf76c.chunk.css",
+    "main.js": "/appointment-app/static/js/main.713b44d8.chunk.js",
+    "main.js.map": "/appointment-app/static/js/main.713b44d8.chunk.js.map",
+    "runtime-main.js": "/appointment-app/static/js/runtime-main.aa98ee13.js",
+    "runtime-main.js.map": "/appointment-app/static/js/runtime-main.aa98ee13.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "/appointment-app/static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.3f829cc3.chunk.js": "/appointment-app/static/js/2.3f829cc3.chunk.js",
+    "static/js/2.3f829cc3.chunk.js.map": "/appointment-app/static/js/2.3f829cc3.chunk.js.map",
+    "index.html": "/appointment-app/index.html",
+    "precache-manifest.42b55bd2dc2d32d1cbaf40bc4dd16066.js": "/appointment-app/precache-manifest.42b55bd2dc2d32d1cbaf40bc4dd16066.js",
+    "service-worker.js": "/appointment-app/service-worker.js",
+    "static/css/2.f3cffc9e.chunk.css.map": "/appointment-app/static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.354cf76c.chunk.css.map": "/appointment-app/static/css/main.354cf76c.chunk.css.map",
+    "static/js/2.3f829cc3.chunk.js.LICENSE.txt": "/appointment-app/static/js/2.3f829cc3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa98ee13.js",
+    "static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.3f829cc3.chunk.js",
+    "static/css/main.354cf76c.chunk.css",
+    "static/js/main.713b44d8.chunk.js"
+  ]
+}
