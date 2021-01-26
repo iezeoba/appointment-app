@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FaPlus } from 'react-icons/fa';
+import { postData } from './PostData.js';
 
 class AddAppointments extends Component {
     constructor() {
@@ -13,19 +14,21 @@ class AddAppointments extends Component {
             apptNotes: ''
         }
         this.handleChange = this.handleChange.bind(this);
-        this.handleAdd = this.handleAdd.bind(this);
+        // this.handleAdd = this.handleAdd.bind(this);
     }
 
-    handleAdd(e) {
+    handleAdd = async (e) => {
         e.preventDefault();
         let tempAppt = {
             model: this.state.model,
             make: this.state.make,
             owner: this.state.owner,
-            apptDate: this.state.apptDate + ' ' + this.state.apptTime,
-            apptNotes: this.state.apptNotes
+            appt_date: this.state.apptDate + ' ' + this.state.apptTime,
+            appt_notes: this.state.apptNotes
         };
-        this.props.addAppointment(tempAppt);
+        // this.props.addAppointment(tempAppt);
+        const handlePost = await postData('https://appointment-app-api-nodejs.herokuapp.com/addData', tempAppt);
+        console.log(handlePost);
 
         this.setState({
             model: '',

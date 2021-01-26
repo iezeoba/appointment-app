@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import '../css/App.css';
-import AddAppointments from './AddAppointments';
-import SearchAppointments from './SearchAppointments';
-import ListAppointments from './ListAppointments';
-import { findIndex, without } from 'lodash';
+import React, { Component } from "react";
+import "../css/App.css";
+import AddAppointments from "./AddAppointments";
+import SearchAppointments from "./SearchAppointments";
+import ListAppointments from "./ListAppointments";
+import { findIndex, without } from "lodash";
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       allAppointments: [],
       formDisplay: false,
-      orderBy: 'model',
-      orderDir: 'asc',
-      queryText: '',
-      lastApptId: 1
+      orderBy: "model",
+      orderDir: "asc",
+      queryText: "",
+      lastApptId: 1,
     };
     this.deleteAppointment = this.deleteAppointment.bind(this);
     this.toggleForm = this.toggleForm.bind(this);
@@ -26,8 +26,8 @@ class App extends Component {
 
   toggleForm() {
     this.setState({
-      formDisplay: !this.state.formDisplay
-    })
+      formDisplay: !this.state.formDisplay,
+    });
   }
 
   searchAppts(query) {
@@ -37,24 +37,24 @@ class App extends Component {
   changeOrder(order, dir) {
     this.setState({
       orderBy: order,
-      orderDir: dir
+      orderDir: dir,
     });
   }
 
   updateInfo = (name, value, id) => {
     let tempAppts = this.state.allAppointments;
     let apptIndex = findIndex(this.state.allAppointments, {
-      apptId: id
+      apptId: id,
     });
     tempAppts[apptIndex][name] = value;
     this.setState({
-      allAppointments: tempAppts
+      allAppointments: tempAppts,
     });
     // console.log(name);
     // console.log(value);
     // console.log(id);
     // console.log(apptIndex);
-  }
+  };
 
   addAppointment(appt) {
     let tempAppts = this.state.allAppointments;
@@ -63,8 +63,8 @@ class App extends Component {
 
     this.setState({
       allAppointments: tempAppts,
-      lastApptId: this.state.lastApptId + 1
-    })
+      lastApptId: this.state.lastApptId + 1,
+    });
   }
 
   deleteAppointment(appt) {
@@ -72,55 +72,62 @@ class App extends Component {
     tempAppts = without(tempAppts, appt);
 
     this.setState({
-      allAppointments: tempAppts
+      allAppointments: tempAppts,
     });
   }
 
-  componentDidMount() {
-    fetch('./data.json')
-      .then(response => response.json())
-      .then(result => {
-        const appts = result.map(item => {
-          item.apptId = this.state.lastApptId;
-          this.setState({ lastApptId: this.state.lastApptId + 1 });
+  getData = () => {
+    fetch("https://appointment-app-api-nodejs.herokuapp.com/getData") //use url
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        const appts = result.map((item) => {
+          // item.apptId = this.state.lastApptId;
+          // this.setState({ lastApptId: this.state.lastApptId + 1 });
           return item;
         });
+        console.log(appts);
         this.setState({
-          allAppointments: appts
+          allAppointments: appts,
         });
       });
+  };
+
+  componentDidMount() {
+    this.getData();
   }
   render() {
     let order;
     let filteredAppts = this.state.allAppointments;
-    if (this.state.orderDir === 'asc') {
+    if (this.state.orderDir === "asc") {
       order = 1;
     } else {
       order = -1;
     }
 
-    filteredAppts = filteredAppts.sort((a, b) => {
-      if (
-        a[this.state.orderBy].toLowerCase() <
-        b[this.state.orderBy].toLowerCase()
-      ) {
-        return -1 * order;
-      } else {
-        return 1 * order;
-      }
-    })
-      .filter(eachItem => {
+    filteredAppts = filteredAppts
+      .sort((a, b) => {
+        if (
+          a[this.state.orderBy].toLowerCase() <
+          b[this.state.orderBy].toLowerCase()
+        ) {
+          return -1 * order;
+        } else {
+          return 1 * order;
+        }
+      })
+      .filter((eachItem) => {
         return (
-          eachItem['model']
+          eachItem["model"]
             .toLowerCase()
             .includes(this.state.queryText.toLowerCase()) ||
-          eachItem['make']
+          eachItem["make"]
             .toLowerCase()
             .includes(this.state.queryText.toLowerCase()) ||
-          eachItem['owner']
+          eachItem["owner"]
             .toLowerCase()
             .includes(this.state.queryText.toLowerCase()) ||
-          eachItem['apptNotes']
+          eachItem["apptNotes"]
             .toLowerCase()
             .includes(this.state.queryText.toLowerCase())
         );
@@ -132,18 +139,22 @@ class App extends Component {
           <div className="row">
             <div className="col-md-12 bg-white">
               <div className="container">
-                <AddAppointments formDisplay={this.state.formDisplay}
+                <AddAppointments
+                  formDisplay={this.state.formDisplay}
                   toggleForm={this.toggleForm}
-                  addAppointment={this.addAppointment} />
+                  addAppointment={this.addAppointment}
+                />
                 <SearchAppointments
                   orderBy={this.state.orderBy}
                   orderDir={this.state.orderDir}
                   changeOrder={this.changeOrder}
-                  searchAppts={this.searchAppts} />
+                  searchAppts={this.searchAppts}
+                />
                 <ListAppointments
                   appointments={filteredAppts}
                   deleteAppointment={this.deleteAppointment}
-                  updateInfo={this.updateInfo} />
+                  updateInfo={this.updateInfo}
+                />
               </div>
             </div>
           </div>
